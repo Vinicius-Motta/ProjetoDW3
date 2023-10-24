@@ -20,36 +20,43 @@ Pontuação atual do grupo: 3 pontos
 - Data de Entrega: 25/10/2023
 - Forma de Avaliação: Seminário
 
-## Instruções Gerais
+ ## Instruções Gerais
+ 
+<details>
+<summary>Instruções Gerais</summary>
 
-1. O software deve seguir a arquitetura Cliente-Servidor conforme ensinado nas aulas da disciplina.
-2. Criar um repositório no GitHub para o projeto, com um arquivo `.gitignore`.
-3. Não utilizar o repositório criado para acompanhar as aulas.
-4. Criar APIs do Back-End em qualquer linguagem de programação.
-5. Armazenar os dados em um Servidor de Banco de Dados (SGBD).
-6. Proteger as rotas das APIs com JWT ou outro mecanismo de token semelhante.
-7. Implementar autenticação para entrar no sistema.
-8. O layout do Front-End pode utilizar um template de administração disponibilizado em sala de aula ou ser personalizado.
-9. O Front-End não deve fazer acesso direto ao SGBD.
-10. Este trabalho não terá continuação.
+  1. O software deve seguir a arquitetura Cliente-Servidor conforme ensinado nas aulas da disciplina.
+  2. Criar um repositório no GitHub para o projeto, com um arquivo .gitignore.
+  3. Não utilizar o repositório criado para acompanhar as aulas.
+  4. Criar APIs do Back-End em qualquer linguagem de programação.
+  5. Armazenar os dados em um Servidor de Banco de Dados (SGBD).
+  6. Proteger as rotas das APIs com JWT ou outro mecanismo de token semelhante.
+  7. Implementar autenticação para entrar no sistema.
+  8. O layout do Front-End pode utilizar um template de administração disponibilizado em sala de aula ou ser personalizado.
+  9. O Front-End não deve fazer acesso direto ao SGBD.
+  10. Este trabalho não terá continuação.
+
+</details>
 
 ## Apresentação do Seminário
 
-### Estudo de Caso
-
+<details>
+  <summary>Estudo de Caso</summary>
 O grupo deve implementar APIs e uma interface gráfica para realizar o CRUD relacionado a uma tabela do módulo financeiro do sistema ERP. A escolha da tabela fica a cargo do grupo, exemplos incluem contas a pagar, contas a receber, plano de contas, bancos, agências, conta corrente, etc.
 
 Todas as tabelas devem ter pelo menos os seguintes campos: ID, Removido, um campo de texto, um campo de data e um campo decimal.
 
-### Regras de Negócio
-
+</details>
+<details>
+  <summary>Regras de Negócio</summary>
 O grupo deve implementar 5 operações de CRUD de acordo com as realizadas em atividades anteriores e vistas em sala de aula. As operações são:
 
-- GetAllXXX: Retorna todos os campos da tabela que não foram apagados (campo 'removido' igual a false).
-- GetXXXByID: Retorna todos os campos da tabela de acordo com o ID informado, desde que o registro não tenha sido apagado.
-- InsertXXX: Insere um novo registro na tabela.
-- UpdateXXX: Atualiza um registro na tabela com base no ID informado.
-- DeleteXXX: Efetua um soft delete de um registro na tabela com base no ID informado, definindo o campo 'removido' como true.
+GetAllXXX: Retorna todos os campos da tabela que não foram apagados (campo 'removido' igual a false).
+GetXXXByID: Retorna todos os campos da tabela de acordo com o ID informado, desde que o registro não tenha sido apagado.
+InsertXXX: Insere um novo registro na tabela.
+UpdateXXX: Atualiza um registro na tabela com base no ID informado.
+DeleteXXX: Efetua um soft delete de um registro na tabela com base no ID informado, definindo o campo 'removido' como true.
+</details>
 
 ### Front-End
 
