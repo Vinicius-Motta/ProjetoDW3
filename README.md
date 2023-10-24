@@ -1,4 +1,4 @@
-<img src="imagem finanças.png" alt="Imagem Finanças">
+<img src="imagem finanças.png" alt="Imagem Finanças" style="width: 100%;">
 
 # Contas a Pagar
 # Trabalho de Desenvolvimento de Software - Módulo Financeiro
