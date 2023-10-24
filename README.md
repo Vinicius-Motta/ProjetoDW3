@@ -63,12 +63,13 @@ Para cada API do back-end, deve ser criada uma função correspondente no front-
 
 ### Sobre o Software
 
-- (10 pontos) Criar as 05 APIs no back-end de acordo com as orientações definidas nas regras de negócio.
-- (06 pontos) Criar as 05 funções no front-end referentes às APIs.
-- (04 pontos) Criar a tela de login.
-- (02 pontos) Criar controle de sessão.
-- (04 pontos) Implementar mecanismo de segurança JWT ou semelhante.
-- (07 pontos) Criar repositório no GitHub.
+| Aspecto           | Pontuação |
+|-------------------|-----------|
+| Repositório Remoto | 5,0       |
+| APIs do Back-End  | 10,0      |
+| Funções do Front-End | 6,0     |
+| Tela de Login     | 4,0       |
+| Controle de Sessão | 2,0     |
 
 ### Sobre o Seminário
 
