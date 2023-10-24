@@ -1,0 +1,83 @@
+@html.extend('layout', function(model){
+
+    @html.block('content', function(model){
+
+  <title>Bem-vindo ao Sistema de Controle Financeiro</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #DCDCDC;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background: linear-gradient(68.15deg, #7e92c4 16.62%, #3c5a9b 85.61%);
+      color: #fff;
+      text-align: center;
+      padding: 20px 0;
+    }
+
+    h1 {
+      font-size: 36px;
+    }
+
+    section {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 20px;
+      background-color: #dae3ec;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-top: 20px;
+      color: black
+    }
+
+    ul {
+      list-style-type: disc;
+      margin-left: 20px;
+    }
+  </style>
+  <header>
+    <h1>Bem-vindo ao Sistema de Controle Financeiro</h1>
+  </header>
+  <section>
+    <h2>Visão Geral do Sistema</h2>
+    <p>O Sistema de Controle Financeiro é uma ferramenta poderosa para ajudar você a gerenciar suas finanças pessoais. Com ele, você pode realizar diversas tarefas, incluindo:</p>
+    <ul>
+      <li>Registrar suas contas e despesas;</li>
+      <li>Acompanhar o seu histórico financeiro;</li>
+      <li>Editar ou excluir registros existentes;</li>
+      <li>Gerar relatórios financeiros;</li>
+      <li>E muito mais!</li>
+    </ul>
+
+    <h2>Como Utilizar o Sistema</h2>
+    <p>Para começar a utilizar o Sistema de Controle Financeiro, siga os passos simples abaixo:</p>
+    <ol>
+      <li>Acesse o sistema com seu nome de usuário e senha.</li>
+      <li>Clique em "Financeiro" para visualizar suas contas financeiras.</li>
+      <li>Clique em "Gerenciamento de Contas" para visualizar suas contas financeiras.</li>
+      <li>Clique em "Contas a Pagar" para visualizar suas contas financeiras.</li>
+      <li>Para adicionar uma nova conta, clique em "Nova Conta".</li>
+      <li>Para vizualizar uma conta, clique em "Vizualizar".</li>
+      <li>Preencha os detalhes da conta, como descrição, data de pagamento e valor.</li>
+      <li>Clique em "Salvar" para registrar a conta.</li>
+      <li>Você pode editar ou excluir contas existentes a qualquer momento na parte de vizualização de contas.</li>
+    </ol>
+
+    <p>Aproveite o Sistema de Controle Financeiro para manter suas finanças organizadas e bem gerenciadas. Se você tiver alguma dúvida, consulte a seção de ajuda ou entre em contato com o suporte.</p>
+  </section>
+
+
+    })
+
+})

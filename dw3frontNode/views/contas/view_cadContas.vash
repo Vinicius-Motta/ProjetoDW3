@@ -1,0 +1,182 @@
+@html.extend('layout', function(model){
+
+@html.block('content', function(model){
+
+
+<main>
+
+    <div class="container-fluid px-4">
+        <h1 class="mt-2">@model.title</h1>
+        <ol class="breadcrumb mb-2">
+            <li class="breadcrumb-item active">@model.title</li>
+        </ol>
+        <div class="row">
+            <div class="col-xl-12">
+
+                <div class="card-header">
+
+                </div>
+
+                <div class="card-body">
+                    <div class="col-xl-5">
+                        <form  id="form">
+                            <div class="mb-1" style="display: none">
+                                <input type="text" name="id" value="@model.data.id" class="form-control" id="id">
+                            </div>
+                            <div class="mb-1">
+                                <label for="descricao" class="form-label">Descrição</label>
+                                <input type="text" name="descricao" value="@model.data.descricao" class="form-control"
+                                    id="descricao" @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="data_pagamento" class="form-label">Data de Pagamento</label>
+                                <input type="date" name="data_pagamento" value="@model.data.data_pagamento" class="form-control" id="data_pagamento"
+                                    @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            <div class="mb-1">
+                                <label for="valor" class="form-label">Valor</label>
+                                <input type="text" name="valor" value="@model.data.valor"
+                                    class="form-control" id="valor" data-thousands="." data-decimal=","
+                                    @(model.oper=='v' ? 'disabled' : '' )>
+                            </div>
+
+                            @if (model.oper=="c") {
+                            <button type="submit" class="btn btn-success me-2" onclick=""
+                                formmethod="POST">Salvar</button>
+                            }
+
+                        </form>
+                        <div>
+                            @if (model.oper=="vu") {
+                            <button type="button" class="btn btn-warning me-2 mb-3" onclick="atualizarConta()">Salvar
+                                Alteração</button>
+                            }
+
+                            @if (model.oper=="v") {
+                            <button type="button" class="btn btn-warning me-2 mb-3"
+                                onclick="window.open('/contas/viewContas/' + $('#id').val() + '/vu', '_self')">Alterar</button>
+                            }
+
+                            @if (model.oper=="v") {
+                            <button type="" class="btn btn-danger mb-3" onclick="excluirConta()">Remover</button>
+                            }
+                        </div>
+                        <button type="button" class="btn btn-primary" onclick="window.location.href = '/contas'">Fechar
+                            sem salvar</button>                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+})
+
+})
+
+<script>
+
+    $(function () {
+        $('#valor').maskMoney();
+    })
+
+    $('#form').on('submit', function () {
+        if ($('#data_pagamento').val() == "") {
+            // $('#errormessage').html("Please provide at least an email ");
+            alert("Informe a data de pagamento");
+            return false;
+        } else {
+            $('#valor').val($('#valor').maskMoney('unmasked')[0]);
+            return true;
+        }
+    });
+
+   async function inserirConta() {
+    try {
+        const id = $("#id").val();
+        const descricao = $("#descricao").val();
+        const data_pagamento = $("#data_pagamento").val();
+        const valor = $('#valor').maskMoney('unmasked')[0]; // Retira a formatação de money
+        // Outros campos necessários
+
+        const response = await axios.post("/contas/insertContas", {
+            id,
+            descricao,
+            data_pagamento,
+            valor,
+            // Outros campos necessários
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+        if (response.data.status === "ok") {
+            alert("Conta inserida com sucesso!");
+        } else {
+            alert("Houve um erro ao inserir a conta.");
+        }
+    } catch (error) {
+        console.error("Erro ao inserir conta:", error);
+        alert("Houve um erro ao inserir a conta.");
+    }
+}
+
+async function atualizarConta() {
+    try {
+        const id = $("#id").val();
+        const descricao = $("#descricao").val();
+        const data_pagamento = $("#data_pagamento").val();
+        const valor = $('#valor').maskMoney('unmasked')[0]; // Retira a formatação de money
+        // Outros campos necessários
+
+        const response = await axios.post("/contas/viewContas", {
+            id,
+            descricao,
+            data_pagamento,
+            valor,
+            // Outros campos necessários
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.data.status === "ok") {
+            alert("Conta alterada com sucesso!");
+        } else {
+            alert("Houve um erro ao alterar a conta.");
+        }
+    } catch (error) {
+        console.error("Erro ao atualizar conta:", error);
+        alert("Houve um erro ao atualizar a conta.");
+    }
+}
+
+async function excluirConta() {
+    try {
+        const id = $("#id").val();
+
+        const response = await axios.post("/contas/DeleteContas", {
+            id,
+        }, {
+            headers: {
+                'Content-Type': 'application/json',
+            },
+        });
+
+        if (response.data.status === "ok") {
+            alert("Conta removida com sucesso!");
+            window.open("/contas", "_self");
+        } else {
+            alert("Houve um erro ao remover a conta.");
+        }
+    } catch (error) {
+        console.error("Erro ao excluir conta:", error);
+        alert("Houve um erro ao excluir a conta.");
+    }
+}
+
+</script>

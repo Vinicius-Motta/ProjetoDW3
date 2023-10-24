@@ -1,0 +1,64 @@
+### teste de buscar conta por ID
+POST http://localhost:40000/Login HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTY5NzAyMzg2MiwiZXhwIjoxNjk3MDI0NDYyfQ.yLVPu_ba_NZHGZlPO4HnP__k6NK97rmK8I59xQiGxu4
+
+{    
+    "username": "qwe",
+    "password": "qwe"
+}
+
+
+### teste de buscar todos os contas
+GET http://localhost:40000/getAllContas HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTY5NzAyNTI2OCwiZXhwIjoxNjk3MDI1ODY4fQ.sr_s-UetBskMI2L_aCHZmNuNZsdSxH4OvJX9Mt5n_t4
+
+{    
+    
+}
+
+### teste de buscar conta por ID
+POST http://localhost:40000/getContaByID HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTY5NzcxOTc4NywiZXhwIjoxNjk3NzIwMzg3fQ.ZlccNJuz9Ih998BYd5KoySmV7SPLR0T5fRSdiKCtGKc
+
+{    
+    "id": 15
+}
+
+### teste de inserção de conta
+POST http://localhost:40000/insertContas HTTP/1.1
+content-type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTY5ODE3MDk0MywiZXhwIjoxNjk4MTcxNTQzfQ.V6xop_GKnzO5Vg5y7ny09HEf8gJ3s2LlwC3ieXLNMbI
+
+{
+    "descricao": "Conta de teste 10",
+    "data_pagamento": "2023-10-05",
+    "valor": 150.50,
+    "deleted": false
+}
+
+
+### teste de atualização de conta
+POST http://localhost:40000/updateContas HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTY5NzAyMzg2MiwiZXhwIjoxNjk3MDI0NDYyfQ.yLVPu_ba_NZHGZlPO4HnP__k6NK97rmK8I59xQiGxu4
+
+{
+    "id": 1,
+    "descricao": "Conta de agua hidraulica",
+    "data_pagamento": "2023-10-04",
+    "valor": 15000000.50,
+    "deleted": false
+}
+
+
+### teste de atualização de conta
+POST http://localhost:40000/DeleteContas HTTP/1.1
+content-type: application/json
+//Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6InF3ZSIsImlhdCI6MTY5NzAyMzg2MiwiZXhwIjoxNjk3MDI0NDYyfQ.yLVPu_ba_NZHGZlPO4HnP__k6NK97rmK8I59xQiGxu4
+
+{    
+    "id": 10
+}
