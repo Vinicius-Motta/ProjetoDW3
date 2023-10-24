@@ -63,18 +63,23 @@ Para cada API do back-end, deve ser criada uma função correspondente no front-
 
 ### Sobre o Software
 
-| Aspecto           | Pontuação |
-|-------------------|-----------|
-| Repositório Remoto | 5,0       |
-| APIs do Back-End  | 10,0      |
-| Funções do Front-End | 6,0     |
-| Tela de Login     | 4,0       |
-| Controle de Sessão | 2,0     |
+| Aspecto                               | Pontuação |
+| ------------------------------------ | --------- |
+| Criar as 05 APIs no back-end          | 10,0      |
+| Criar as 05 funções no front-end      | 06,0      |
+| Criar a tela de login                 | 04,0      |
+| Criar controle de sessão              | 02,0      |
+| Implementar mecanismo de segurança JWT | 04,0      |
+| Criar repositório no GitHub           | 07,0      |
 
 ### Sobre o Seminário
 
 - Apresentação até 15 minutos.
 - Forma de avaliação: Serão descontados pontos por tempo excedido e vestimenta inadequada.
-  - Passar o tempo limite: Perda de 0,2 ponto por minuto a mais.
-  - Vestimenta inapropriada (chinelo de dedo, bermuda, camiseta cavada): Perda de 3,0 pontos.
+
+| Aspecto                                      | Pontuação |
+| -------------------------------------------- | --------- |
+| Tempo de Apresentação (até 15 minutos)      | -         |
+| Tempo Excedido (por minuto extra)           | -0,2      |
+| Vestimenta Inapropriada (chinelo, bermuda, camiseta cavada) | -3,0 |
 
