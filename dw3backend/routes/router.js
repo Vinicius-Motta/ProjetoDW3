@@ -16,7 +16,7 @@ routerApp.get("/", (req, res) => {
 //Rotas de Contas
 routerApp.post("/getContaByID", appLogin.AutenticaJWT, appContas.getContaByID);
 routerApp.post("/insertContas", appLogin.AutenticaJWT, appContas.insertContas);
-routerApp.get("/getAllContas", appContas.getAllContas);
+routerApp.get("/getAllContas", appLogin.AutenticaJWT, appContas.getAllContas);
 //routerApp.post("/getContaByID", appContas.getContaByID);
 //routerApp.post("/insertContas", appContas.insertContas);
 routerApp.post("/updateContas", appContas.updateContas);
